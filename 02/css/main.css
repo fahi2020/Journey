@@ -1,0 +1,358 @@
+@charset "UTF-8";
+
+.slideshow {
+    background-color: rgb(0, 0, 0);
+    height: 465px;
+    min-width: 960px;
+    overflow: hidden;
+    position: relative;
+}
+
+.slideshow-slides {
+    height: 100%;
+    position: absolute;
+    width: 100%;
+
+}
+.slideshow-slides .slide {
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+
+}
+.slideshow-slides .slide img {
+    left: 50%;
+    margin-left: -800px;
+    position: absolute;
+}
+
+.slideshow-nav a,
+.slideshow-indicator a {
+    background-color: rgba(0, 0, 0, 0); 
+    overflow: hidden;
+}
+.slideshow-nav a:before,
+.slideshow-indicator a:before {
+    content: url(../img/sprites.png);
+    display: inline-block;
+    font-size: 0;
+    line-height: 0;
+}
+
+.slideshow-nav a {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 72px;
+    height: 72px;
+    margin-top: -36px;
+}
+.slideshow-nav a.prev {
+    margin-left: -480px;
+}
+.slideshow-nav a.prev:before {
+    margin-top: -20px;    
+}
+.slideshow-nav a.next {
+    margin-left: 408px;
+}
+.slideshow-nav a.next:before {
+    margin-left: -80px;
+    margin-top: -20px;
+}
+.slideshow-nav a.disabled {
+    display: none;
+}
+
+.slideshow-indicator {
+    bottom: 30px;
+    height: 16px;
+    left: 0;
+    position: absolute;
+    right: 0;
+    text-align: center;
+}
+.slideshow-indicator a {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-left: 3px;
+    margin-right: 3px;
+}
+.slideshow-indicator a.active {
+    cursor: default;
+}
+.slideshow-indicator a:before {
+    margin-left: -110px;
+}
+.slideshow-indicator a.active:before {
+    margin-left: -130px;
+}
+.picture img {
+    opacity: 1;
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+  }
+.picture:hover img {
+    opacity: .5;
+  }
+.focus-picture {
+    -webkit-transition: all 1s ease;
+       -moz-transition: all 1s ease;
+         -o-transition: all 1s ease;
+        -ms-transition: all 1s ease;
+            transition: all 1s ease;
+  }
+    
+.focus:hover {
+    border: 50px solid #000;
+    border-radius: 50%;
+  }
+
+  a .hover{
+    display: none;
+    }
+
+
+.no-js .slideshow {
+    height: auto;
+}
+.no-js .slideshow-slides {
+    height: auto;
+    position: static;
+}
+.no-js .slideshow-slides .slide {
+    display: block;
+    height: auto;
+    position: static;
+}
+.no-js .slideshow-slides .slide img {
+    margin: auto;
+    position: static;
+}
+.no-js .slideshow-nav,
+.no-js .slideshow-indicator {
+    display: none;
+}
+.filter-form{
+    float:right;
+}
+.filter-form label{
+    cursor:pointer;
+    display:inline-block;
+    font-weight:bold;
+    margin-left: 1em;
+    padding:0 0.25em;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+}
+.filter-form label.ui-state-focus{
+    outline:1px dotted;
+}
+.filter-form label.ui-icon{
+    background:url(..img/sprites.png)no-repeat 0 0;
+    display:inline-block;
+    height:17px;
+    margin-right:0.5em;
+    margin-top:2px;
+    width:17px;
+    vertical-align:top;
+}
+.filter-form label.ui-state-active .ui-icon{
+    background-position:-20px 0;
+}
+.load-more{
+    backgroumd-color:rgb(255,255,255);
+    border:1px solid rgb(230,230,230);
+    display:block;
+    padding:1em 0;
+    width:100%;
+    margin-top:10px;
+}
+.grid{
+    display:grid;
+    gap:26px;
+    grid-template-columns:1fr 1fr 1fr;
+    margin-top:6%;
+    margin-bottom:50px;
+}
+.grid{
+    display:grid;
+    gap:26px;
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    margin-top:6%;
+    margin-bottom:50px;
+}
+
+p{
+    text-align: center;
+    font-size:1em;
+    color:#323443
+}
+h1{
+    font-size:3em;
+    text-align: center;
+    color:#323443
+
+}
+h2{
+    font-size:3em;
+    text-align:center;
+    color:#323443
+}
+h3{
+    font-size:3em;
+    text-align:center;
+    color:#323443
+}
+.plan-info img{
+    width:900px;
+    height:465px;
+    padding:200px;
+    padding-top: 0%;    
+}
+
+.work-section .tabs-nav li{
+    border-right:1px solid rgb(218,218,218);
+    float:left;
+    position:relative;
+    -webkit-box-shadow:1px 0 rgb(255,255,255);
+            box-shadow:1px 0 rgb(255,255,255);
+}
+.work-section.tabs-nav a{
+    display:block;
+    padding:0 1.36em;
+    position:relative;
+}
+.work-section .tabs-nav a:hover,
+.work-section.tabs-nav a.active{
+    background-color:rgb(51,51,51);
+    color:rgb(255,255,255);
+}
+.work-section .tabs-nav a.active:after{
+    background:url(../img/sprites.png)no-repeat 0 0;
+    content:"";
+    position:absolute;
+    top:100%;
+    left:50%;
+    width:37px;
+    height:19px;
+    margin-left:-18px;
+}
+.work-section .section-body{
+height:400px;
+position:relative;
+}
+
+
+nav{
+text-align: center;
+}
+nav ul{
+margin: 0 ;
+padding: 0 ;
+}
+nav ul li{
+list-style: none;
+display: inline-block;
+width: 18%;
+min-width: 90px;
+}
+nav ul li a{
+text-decoration: none;
+color: #333;
+}
+nav ul li.current a{
+color: #F33135;
+}
+nav ul li a:hover{
+color: #E7DA66;
+}
+
+
+#home{
+    background-image:url(../img/home-main.jpg);
+    height:270px;
+    margin-bottom:40px;
+}
+
+h4{
+    text-align: center;
+    font-size:2em;
+}
+
+
+.home {
+	width:			280px;
+	height:			188px;
+	overflow:		hidden;
+	margin:			10px 8px 10px 16px;
+    position:		relative;
+    margin:         auto;
+}
+.home .caption {
+	font-size:		130%;
+	text-align: 		center;
+	color:			#fff;
+}
+.home .mask {
+	width:			100%;
+	height:			100%;
+	position:		absolute;
+	top:			0;
+	left:			0;
+	opacity:		0;	
+	background-color:	rgba(0,0,0,0.4);
+	-webkit-transition:	all 0.6s ease;
+	transition:		all 0.6s ease;
+}
+.home:hover .mask {
+	opacity:		1;	
+	padding-top:		80px;	
+}
+#plan{
+    background-image:url(../img/plan1.jpg);
+    height:270px;
+    margin-bottom:40px;
+}
+
+.plan {
+	width:			280px;
+	height:			188px;
+	overflow:		hidden;
+	margin:			10px 8px 10px 16px;
+    position:		relative;
+    margin:         auto;
+}
+.plan .caption {
+	font-size:		130%;
+	text-align: 		center;
+	color:			#fff;
+}
+.plan .mask {
+	width:			100%;
+	height:			100%;
+	position:		absolute;
+	top:			0;
+	left:			0;
+	opacity:		0;	
+	background-color:	rgba(0,0,0,0.4);
+	-webkit-transition:	all 0.6s ease;
+	transition:		all 0.6s ease;
+}
+.plan:hover .mask {
+	opacity:		1;	
+	padding-top:		80px;	
+}
+
+footer{
+    background:#432;
+    text-align:center;
+    padding:20px 0;
+}
+footer p{
+    color:#fff;
+    font-size:0.875rem;
+}
